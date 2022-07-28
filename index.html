@@ -1,28 +1,40 @@
+
+
 <!DOCTYPE html>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<style> .chart rect { fill: steelblue } </style>
+<html>
 
-<html><body>
-<p> Here are the magic numbers from Lost: <span id="data"></span> </p>
+<!-- <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head> -->
+<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+    <head>
+        <script src = "package/dist/d3.min.js"></script>
+        <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    </head>
+    <style> .chart rect { fill: steelblue } </style>
 
-<svg class="chart" width="120" height="500">
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-</svg>
+    
+        <body>
+    <p> Here are the magic numbers from Lost: <span id="data"></span> </p>
 
-<script>
-    var data = [4,8,15,16,23,42]
-    document.getElementById("data").innerHTML = data;
-    d3.selectAll("rect").data(data)
-        .attr("width",19)
-        .attr("height", function(d) { return 10*d; })
-        .attr("x", function(d,i) { return 20*i; })
-        .attr("y", function(d) { return 420 -10*d; });
-</script>
+    <svg class="chart" width="120" height="500">
+        <rect></rect>
+        <rect></rect>
+        <rect></rect>
+        <rect></rect>
+        <rect></rect>
+        <rect></rect>
+    </svg>
+
+    <script>
+        var data = [4,8,15,16,23,42]
+        document.getElementById("data").innerHTML = data;
+        d3.selectAll("rect").data(data)
+            .attr("width",19)
+            .attr("height", function(d) { return 10*d; })
+            .attr("x", function(d,i) { return 20*i; })
+            .attr("y", function(d) { return 420 -10*d; });
+    </script>
 
 <!-- <body>
     <script type="text/javascript">
@@ -39,4 +51,5 @@
     </script>
 </body> -->
 
-</body></html>
+    </body>
+</html>
