@@ -54,15 +54,25 @@
         //     // Plot.line(aapl, {x: "date", y: "unrate"}).plot()
         // });
         // var aapl = FileAttachment(unrate_url).csv({typed: true})
-        var aapl = d3.csv(unrate_url)
-        chart = LineChart(aapl, {
-            x: d => d.date,
-            y: d => d.close,
-            yLabel: "↑ Daily close ($)",
-            width:  1000,
-            height: 500,
-            color: "steelblue"
-        })
+
+        d3.csv('yourcsv.csv')
+            .then(function(data) {
+                // data is now whole data set
+                // draw chart in here!
+                chart = LineChart(aapl, {
+                    x: d => d.date,
+                    y: d => d.close,
+                    yLabel: "↑ Daily close ($)",
+                    width:  1000,
+                    height: 500,
+                    color: "steelblue"
+                })
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        // Promise.all([var aapl = d3.csv(unrate_url)])
+        
     
         // Copyright 2021 Observable, Inc.
     // Released under the ISC license.
