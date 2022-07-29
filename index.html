@@ -41,7 +41,9 @@
 
 
     <script>
-        d3.csv("blob/main/Data/UNRATE.csv", function(data) {
+        var unrate_url = "blob/main/Data/UNRATE.csv"
+        var cpiaucsl_url = "blob/main/Data/CPIAUCSL.csv"
+        d3.csv(cpiaucsl_url, function(data) {
             console.log(data);
         });
     </script>
