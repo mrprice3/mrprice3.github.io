@@ -53,7 +53,8 @@
         //     // console.log(data);
         //     // Plot.line(aapl, {x: "date", y: "unrate"}).plot()
         // });
-        aapl = FileAttachment(unrate_url).csv({typed: true})
+        // var aapl = FileAttachment(unrate_url).csv({typed: true})
+        var aapl = d3.csv(unrate_url)
         chart = LineChart(aapl, {
             x: d => d.date,
             y: d => d.close,
