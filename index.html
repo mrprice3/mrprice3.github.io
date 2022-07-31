@@ -60,11 +60,11 @@
         var width = 1000;
         var height = 500;
         
-        var svg = d3.select("body").append("svg");
-        svg.append("text")
-        .attr("y", 20)
-        .text("this text is in the outer SVG");
-        
+        // var svg = d3.select("body").append("svg");
+        // svg.append("text")
+        // .attr("y", 20)
+        // .text("this text is in the outer SVG");
+
         d3.csv(unrate_url)
             .then(function(data) {
                 // data is now whole data set
@@ -87,6 +87,15 @@
                 console.log(error);
             })
         // Promise.all([var aapl = d3.csv(unrate_url)])
+
+        var svg = d3.select("body").append("svg");
+        svg.append("text")
+        .attr("y", 20)
+        .text("this text is in the outer SVG");
+        var innerSVG = svg.append("svg");
+        innerSVG.append("text")
+        .attr("y", 50)
+        .text("this text is in the inner SVG");
         
     
         // Copyright 2021 Observable, Inc.
