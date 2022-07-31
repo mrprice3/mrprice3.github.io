@@ -45,8 +45,8 @@
             .attr("y", function(d) { return 420 -10*d; });
     </script> -->
 
-    <div id = "svgcontainer"></div>
-    <svg class = "chart" width="1000" height="500"></svg>
+    <!-- <div id = "svgcontainer"></div> -->
+    <svg class = "chart" id="svgcontainer" width="1000" height="500"></svg>
 
     <script>
         var unrate_url = "Data/UNRATE.csv"
@@ -72,8 +72,8 @@
                     height: 500,
                     color: "steelblue"
                 })
-                // var svg = d3.select("#svgcontainer")
-                //     .append(chart)
+                var svg = d3.select("#svgcontainer")
+                    .append(chart)
                 //     .attr("width", width)
                 //     .attr("height", height);
 
