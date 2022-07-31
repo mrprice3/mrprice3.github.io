@@ -82,14 +82,14 @@
                 //     .attr("width", width)
                 //     .attr("height", height);
 
-                var svg = d3.select("body").append(chart); // HERE
-                svg.append("text")
-                    .attr("y", 20)
-                    .text("this text is in the outer SVG");
-                var innerSVG = svg.append("svg");
-                innerSVG.append("text")
-                    .attr("y", 50)
-                    .text("this text is in the inner SVG");
+                var svg = d3.select("body").append("svg").append(chart); // HERE
+                // svg.append("text")
+                //     .attr("y", 20)
+                //     .text("this text is in the outer SVG");
+                // var innerSVG = svg.append("svg");
+                // innerSVG.append("text")
+                //     .attr("y", 50)
+                //     .text("this text is in the inner SVG");
 
                 console.log(data)
 
