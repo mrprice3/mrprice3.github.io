@@ -72,10 +72,10 @@
                     color: "steelblue"
                 })
                 var svg = d3.select("#svgcontainer")
-                    .append("svg")
+                    .append(chart)
                     .attr("width", width)
                     .attr("height", height);
-                    
+
             })
             .catch(function(error){
                 console.log(error);
