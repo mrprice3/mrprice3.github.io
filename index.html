@@ -46,7 +46,7 @@
     </script> -->
 
     <!-- <div id = "svgcontainer"></div> -->
-    <svg class = "chart" id="svgcontainer" width="1000" height="500"></svg>
+    <!-- <svg class = "chart" id="svgcontainer" width="1000" height="500"></svg> -->
 
     <script>
         var unrate_url = "Data/UNRATE.csv"
@@ -59,7 +59,12 @@
 
         var width = 1000;
         var height = 500;
-
+        
+        var svg = d3.select("body").append("svg");
+        svg.append("text")
+        .attr("y", 20)
+        .text("this text is in the outer SVG");
+        
         d3.csv(unrate_url)
             .then(function(data) {
                 // data is now whole data set
