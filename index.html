@@ -83,7 +83,7 @@
                 //     .attr("height", height);
                 console.log("about to append svg")
 
-                var svg = d3.select("body").append("svg").append(chart); // HERE
+                var svg = d3.select("body").append("svg").data(chart).enter(); // HERE
                 // svg.append("text")
                 //     .attr("y", 20)
                 //     .text("this text is in the outer SVG");
